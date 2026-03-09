@@ -102,4 +102,68 @@ let gg = 7 % 2 // il due nel 7 ci sta 3 volte con il RESTO DI 1 --> 1
 let hh = 10 % 5 // 0
 
 // numeri particolari -> 0, -0, +infinity -infinity, NaN (Not A Number)
-console.log(50 / 'Stefano')
+console.log('questa divisione non restituisce un numero', 50 / 'Stefano') // NaN
+
+// OPERATORE + SU STRINGHE
+const longString = 'ciao a tutti! mi chiamo Stefano e ho ' + '18' + ' anni'
+// l'operatore + vi può anche servire per CONCATENARE stringhe
+console.log('valore di longString', longString)
+
+const maybeANumber = '40' + '60' // "4060"
+const maybeANumber2 = 40 + '60' // "4060", come prima! trasforma il 40 in stringa e lo concatena a "60"
+console.log(maybeANumber2)
+
+// OPERATORI DI COMPARAZIONE
+// < > <= >= ! === !==
+// l'utilizzo di tutti questi operatori restituisce un valore BOOLEANO
+let qq = 4
+let ww = 6
+
+console.log(qq < ww) // 4 < 6 --> true
+console.log(qq > ww) // 4 > 6 --> false
+console.log(qq >= ww) // 4 >= 6 --> false
+console.log(qq === ww) // 4 === 6 --> false, 4 non è uguale a 6
+console.log(qq !== ww) // 4 !== 6 --> true, la loro DISUGUAGLIANZA è true!
+
+let rr = 50
+let tt = '50'
+
+let uguali = rr === tt // false, perchè nonostante il VALORE sia uguale, il TIPO è diverso!
+let nonUsatelo = rr == tt // true, perchè il == controlla il VALORE ma NON il TIPO!
+// il == vi consiglio caldamente di DIMENTICARVELO
+
+const valore = 4 < 5 // true
+console.log(!valore) // darebbe FALSE, perchè il ! inverte il significato
+
+// VAR
+// var è un vecchio modo di dichiarare le variabili, oramai completamente sostituito da let.
+// var creava delle variabili con visibilità di FUNZIONE, creando confusione nei blocchi di codice
+// console.log(ciao)
+// var ciao = 10
+// queste due righe sopra funzionerebbero in JS, grazie al costrutto var (utilizziamo la variabile prima
+// di averla definita!! obbrobrio, non funzionerebbe in qualsiasi altro linguaggio decente)
+
+// OPERATORI LOGICI: AND (&&) e OR (||)
+let belTempo = true
+let macchinaAPosto = false
+
+// l'operatore AND serve a valutare complessivamente 2 o più condizioni per ottenere un unico risultato finale
+// l'operatore AND restituisce TRUE tra 2 o più condizioni SOLAMENTE se ENTRAMBE sono TRUE
+let vadoAlMare = belTempo && macchinaAPosto // -> true && false --> false
+// SPECCHIETTO AND &&
+// true && true -> true
+// true && false -> false
+// false && true -> false
+// false && false -> false
+
+// l'operatore OR serve a valutare complessivamente 2 o più condizioni per ottenere un unico risultato finale
+// l'operatore OR restituisce TRUE tra 2 o più condizioni ANCHE SOLO se UNA vale true
+let hoLaMacchina = false
+let hoLaBici = true
+
+let tornoACasa = hoLaMacchina || hoLaBici // true
+// SPECCHIETTO OR ||
+// true || true -> true
+// true || false -> true
+// false || true -> true
+// false || false -> false
